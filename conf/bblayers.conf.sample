@@ -1,0 +1,16 @@
+# POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
+# changes incompatibly
+POKY_BBLAYERS_CONF_VERSION = "2"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+
+YOCTOROOT = "${@os.path.abspath(os.path.join("${TOPDIR}", os.pardir))}"
+
+BBLAYERS ?= " \
+  ${YOCTOROOT}/src/poky/meta \
+  ${YOCTOROOT}/src/poky/meta-poky \
+  ${YOCTOROOT}/src/poky/meta-yocto-bsp \
+  ${YOCTOROOT}/src/meta-tegra \
+  ${YOCTOROOT}/src/meta-acme \
+  "

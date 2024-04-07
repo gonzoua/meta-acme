@@ -1,0 +1,6 @@
+MACHINE ?= "r2d2"
+
+DISTRO_FEATURES = " "
+
+IMAGE_CLASSES += "image_types_tegra"
+IMAGE_FSTYPES = "tegraflash"
